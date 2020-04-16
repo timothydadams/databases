@@ -1,6 +1,6 @@
 var Parse = {
 
-  server: `http://parse.hrr.hackreactor.com/chatterbox/classes/messages`,
+  server: 'http://parse.hrr.hackreactor.com/chatterbox/classes/messages',
 
   create: function(message, successCB, errorCB = null) {
 
