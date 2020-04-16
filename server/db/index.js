@@ -5,3 +5,24 @@ var mysql = require('mysql');
 // and to the database "chat".
 
 
+dbConnection = mysql.createConnection({
+  // host: '127.0.0.1:3306',
+  user: 'root',
+  password: '',
+  database: 'chat'
+});
+
+dbConnection.connect((err, data) =>{
+  if (err) {
+    throw ('Failed to connect', err);
+    // console.log('error:', err);
+    // return;
+  }
+  // console.log('data:', data);
+});
+
+
+//The most basic way to perform a query is the .query() method on an object(Connection, Pool, or PoolNamespace instance).
+//dbconnectionInstance.query(sqlString, callback), table names need backticks!!!!
+
+
