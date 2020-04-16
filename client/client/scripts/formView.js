@@ -19,9 +19,10 @@ var FormView = {
 
     Parse.create(message, (data) => {
       _.extend(message, data);
+      console.log(message);
       Messages.add(message, MessagesView.render);
     });
-      },
+  },
 
   setStatus: function(active) {
     var status = active ? 'true' : null;
