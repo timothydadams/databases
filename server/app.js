@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var db = require('./db');
 
 // Middleware
@@ -13,6 +14,9 @@ module.exports.app = app;
 
 // Set what we are listening on.
 app.set('port', 3000);
+
+// Having CORS headers
+app.use(cors());
 
 // Logging and parsing
 app.use(morgan('dev'));

@@ -5,12 +5,13 @@ module.exports = { // routes.js is ensuring these methods only receive what they
     get: function (req, res) { // a function which handles a get request for all messages.
       //get a username from req
       // invoke the model
-      models.messages.get(function(err, data) {
+      models.messages.get(function(err, data, fields) {
         if (err) {
+          console.log(err);
           res.status(500).send(err).end();
           return;
         }
-        res.status(200).send(data).end();
+        res.json(data);
       });
       //search dbtable user for username
     },
@@ -21,7 +22,7 @@ module.exports = { // routes.js is ensuring these methods only receive what they
         if (err) {
           res.status(500).send(err).end();
         } else {
-          res.status(201).send(data).end();
+          res.sendStatus(201);
         }
       });
     }
@@ -38,7 +39,7 @@ module.exports = { // routes.js is ensuring these methods only receive what they
         if (err) {
           res.status(500).send(err).end();
         } else {
-          res.status(201).send(data).end();
+          res.sendStatus(201);
         }
       });
     }
