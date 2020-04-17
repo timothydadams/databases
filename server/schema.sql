@@ -38,7 +38,7 @@ DROP TABLE IF EXISTS rooms;
 --   PRIMARY KEY (id)
 -- );
 
-ALTER TABLE messages ADD FOREIGN KEY (userId) REFERENCES users (id);
+-- ALTER TABLE messages ADD FOREIGN KEY (userId) REFERENCES users (id);
 -- ALTER TABLE messages ADD FOREIGN KEY (roomId) REFERENCES rooms (id);
 
 
